@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AR One-Room-Puzzel-Solver", "AR One-Room-Puzzel-Solver.csproj", "{42EAB8F8-F483-8EC4-DCF1-70384CF2993A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AR One-Room-Puzzel-Solver.Editor", "AR One-Room-Puzzel-Solver.Editor.csproj", "{6067094A-9942-84F5-702E-8ABF4BCA334C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42EAB8F8-F483-8EC4-DCF1-70384CF2993A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EAB8F8-F483-8EC4-DCF1-70384CF2993A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EAB8F8-F483-8EC4-DCF1-70384CF2993A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EAB8F8-F483-8EC4-DCF1-70384CF2993A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6067094A-9942-84F5-702E-8ABF4BCA334C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6067094A-9942-84F5-702E-8ABF4BCA334C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6067094A-9942-84F5-702E-8ABF4BCA334C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6067094A-9942-84F5-702E-8ABF4BCA334C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
