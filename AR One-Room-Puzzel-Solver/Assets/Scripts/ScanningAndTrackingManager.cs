@@ -25,14 +25,19 @@
         /// </summary>
         public GameObject m_searchingForPlaneUI;
 
+        public GameObject m_goOutOfFocus;
+
         private List<TrackedPlane> m_newPlanes = new List<TrackedPlane>();
 
         private List<TrackedPlane> m_allPlanes = new List<TrackedPlane>();
 
+
+        public RotateAroundCamera m_scrRotateAroundCamera;
+
         /// <summary>
         /// The Unity Update() method.
         /// </summary>
-        public void Update ()
+        public void Update()
         {
             _QuitOnConnectionErrors();
 
@@ -47,19 +52,24 @@
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
             Frame.GetNewPlanes(ref m_newPlanes);
 
-            // Iterate over planes found in this frame and instantiate corresponding GameObjects to visualize them.
-            for (int i = 0; i < m_newPlanes.Count; i++)
+            if (m_scrRotateAroundCamera.IsFocus())
             {
-                // Instantiate a plane visualization prefab and set it to track the new plane. The transform is set to
-                // the origin with an identity rotation since the mesh for our prefab is updated in Unity World
-                // coordinates.
-                GameObject planeObject = Instantiate(m_trackedPlanePrefab, Vector3.zero, Quaternion.identity,
-                    transform);
-                planeObject.GetComponent<PlaneVisualizer>().SetTrackedPlane(m_newPlanes[i]);
+                // Iterate over planes found in this frame and instantiate corresponding GameObjects to visualize them.
+                for (int i = 0; i < m_newPlanes.Count; i++)
+                {
+                    // Instantiate a plane visualization prefab and set it to track the new plane. The transform is set to
+                    // the origin with an identity rotation since the mesh for our prefab is updated in Unity World
+                    // coordinates.
+                    GameObject planeObject = Instantiate(m_trackedPlanePrefab, Vector3.zero, Quaternion.identity,
+                        transform);
+                    planeObject.GetComponent<PlaneVisualizer>().SetTrackedPlane(m_newPlanes[i]);
 
-                // Apply a grid rotation.
-                planeObject.GetComponent<Renderer>().material.SetFloat("_UvRotation", Random.Range(0.0f, 360.0f));
+                    // Apply a grid rotation.
+                    planeObject.GetComponent<Renderer>().material.SetFloat("_UvRotation", Random.Range(0.0f, 360.0f));
+                }
             }
+
+            m_goOutOfFocus.SetActive(!m_scrRotateAroundCamera.IsFocus());
 
             // Disable the snackbar UI when no planes are valid.
             bool showSearchingUI = true;

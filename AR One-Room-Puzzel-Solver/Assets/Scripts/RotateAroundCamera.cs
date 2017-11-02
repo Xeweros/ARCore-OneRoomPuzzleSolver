@@ -21,6 +21,11 @@ public class RotateAroundCamera : MonoBehaviour
         m_bIsHitObjectFocus = false;
     }
 
+    public bool IsFocus()
+    {
+        return m_bIsHitObjectFocus;
+    }
+
     // Update is called once per frame
     void Update ()
     {
