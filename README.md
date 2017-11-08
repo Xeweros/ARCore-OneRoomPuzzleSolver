@@ -1,2 +1,2 @@
-# ARCore-EscapeRoomGame
+# ARCore-OneRoomPuzzleSolver
 ARCore Game
