@@ -20,16 +20,24 @@
         /// </summary>
         public GameObject m_trackedPlanePrefab;
 
+        public GameObject m_goCamera;
+
         /// <summary>
         /// A gameobject parenting UI for displaying the "searching for planes" snackbar.
         /// </summary>
+        [Header("UI")]
         public GameObject m_searchingForPlaneUI;
-
         public GameObject m_goOutOfFocusUI;
-
         public GameObject m_goCameraNotCenterUI;
-
         public GameObject m_goScanningSuccesfullUI;
+
+        [Header("Scan Objects")]
+        public GameObject m_goPrefabScanFocusObject;
+        public GameObject m_goPrefabFullCircleCheck;
+        public GameObject m_goPrefabCameraInCenter;
+        public Transform m_transFocusObject;
+        public Transform m_transFullCircleCheck;
+        public Transform m_transCameraInCenter;
 
         private List<TrackedPlane> m_newPlanes = new List<TrackedPlane>();
 
@@ -66,8 +74,30 @@
         private bool m_bIsFullCircleCheck = false;
 
         public CameraFocusOnRaycastObject m_scrCameraFocusRaycast;
-        public GameObject m_goFocusObject;
-        public GameObject m_goCameraInCenter;
+        private GameObject m_goFocusObject;
+        private GameObject m_goFullCircleCheck;
+        private GameObject m_goCameraInCenter;
+
+        private void Start()
+        {
+            Anchor anchorFocusObject = Session.CreateAnchor(m_transFocusObject.position, Quaternion.identity);
+            m_goFocusObject = Instantiate(m_goPrefabScanFocusObject, m_transFocusObject.position, Quaternion.identity, anchorFocusObject.transform);
+
+            Anchor anchorFullCircleCheck = Session.CreateAnchor(m_transFullCircleCheck.position, Quaternion.identity);
+            m_goFullCircleCheck = Instantiate(m_goPrefabFullCircleCheck, m_transFullCircleCheck.position, Quaternion.identity, anchorFullCircleCheck.transform);
+
+            Anchor anchorCameraInCenter = Session.CreateAnchor(m_transCameraInCenter.position, Quaternion.identity);
+            m_goCameraInCenter = Instantiate(m_goPrefabCameraInCenter, m_transCameraInCenter.position, Quaternion.identity, anchorCameraInCenter.transform);
+
+            m_goCamera.GetComponent<CameraFocusOnRaycastObject>().m_goFocusObject = m_goFocusObject.transform.GetChild(0).gameObject;
+
+            m_goFocusObject.GetComponent<RotateAroundCamera>().m_scrScanningManager = this;
+
+            m_goFullCircleCheck.GetComponent<FullCircleCheck>().m_goFocusObject = m_goFocusObject.transform.GetChild(0).gameObject;
+            m_goFullCircleCheck.GetComponent<FullCircleCheck>().m_scrScanningManager = this;
+
+            m_goCameraInCenter.GetComponent<IsCameraInCenter>().m_scrScanningManager = this;
+        }
 
         /// <summary>
         /// The Unity Update() method.

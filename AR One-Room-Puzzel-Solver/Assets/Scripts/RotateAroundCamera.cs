@@ -5,7 +5,6 @@ using GoogleARCore.HelloAR;
 
 public class RotateAroundCamera : MonoBehaviour
 {
-    public Transform m_v3CameraPosition;
     public float m_fRotationSpeed = 1.0f;
 
     public ScanningAndTrackingManager m_scrScanningManager;
