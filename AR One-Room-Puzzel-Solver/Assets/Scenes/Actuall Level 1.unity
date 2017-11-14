@@ -634,10 +634,10 @@ MonoBehaviour:
   m_searchingForPlaneUI: {fileID: 435534948}
   m_fRoomWidth: 4
   m_fRoomDepth: 7
-  m_fRoomHeight: 3
+  m_fRoomHeight: 3.4
   m_goPrefabFog: {fileID: 1131940255596068, guid: d7d4835032922024ab74a7d03d140068,
     type: 2}
-  m_nNumberOfFog: 100
+  m_nNumberOfFog: 40
 --- !u!4 &1929075594
 Transform:
   m_ObjectHideFlags: 0

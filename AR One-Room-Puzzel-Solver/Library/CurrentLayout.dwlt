@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -107,7 +107,7 @@ MonoBehaviour:
     width: 1920
     height: 947
   m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 18006, y: 14042}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 11
 --- !u!114 &6
@@ -131,7 +131,7 @@ MonoBehaviour:
     width: 1558
     height: 947
   m_MinSize: {x: 406, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
   controlID: 12
 --- !u!114 &7
@@ -230,10 +230,10 @@ MonoBehaviour:
     y: 612
     width: 1558
     height: 335
-  m_MinSize: {x: 334, y: 271}
-  m_MaxSize: {x: 14004, y: 10021}
+  m_MinSize: {x: 336, y: 271}
+  m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 68
+  controlID: 136
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,8 +252,8 @@ MonoBehaviour:
     y: 0
     width: 786
     height: 335
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -524,7 +524,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 421effff8647ffff98fbffff00000000b22d0000bc2d0000
+    m_ExpandedIDs: 98fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,19 +613,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GitHubReposetories\ARCore-EscapeRoomGame\AR One-Room-Puzzel-Solver
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ac2b0000
-    m_LastClickedID: 11180
-    m_ExpandedIDs: 00000000b2280000dc280000ea2a0000ec2a0000a22b0000d02b0000e22b0000122c00004a2c0000cc2c00008a2e00008c2e00008e2e0000902e0000922e0000942e0000ffffff7f
+    m_SelectedIDs: e82b0000
+    m_LastClickedID: 11240
+    m_ExpandedIDs: 00000000b4280000e6280000762a0000782a0000fe2a0000202b0000322b0000582b0000e42b0000602d0000622d0000642d0000662d0000682d00006a2d00006c2d0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -653,7 +653,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b2280000dc280000ea2a0000ec2a0000a22b0000ac2b0000d02b0000e22b0000122c00004a2c0000cc2c00008a2e00008c2e00008e2e0000902e0000922e0000942e0000
+    m_ExpandedIDs: 00000000b4280000e6280000762a0000782a0000fe2a0000202b0000322b0000582b0000e42b0000602d0000622d0000642d0000662d0000682d00006a2d00006c2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -684,18 +684,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: d05effffa440fcff4a87fbfff6fefaff64d0f9ff6aa2f9fffa24000020250000cc270000e625000036250000000000004e250000e62c0000122a00005a2a000080330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: TriggerFogDestroyer
-      m_OriginalName: TriggerFogDestroyer
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14548
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:

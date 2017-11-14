@@ -74,7 +74,7 @@ namespace GoogleARCore.HelloAR
             for (int i = 0; i < m_nNumberOfFog; i++)
             {
                 _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
-                _fDepth = Random.Range(-m_fRoomDepth / 2.0f, m_fRoomDepth / 2.0f);
+                _fDepth = Random.Range(0.0f, m_fRoomDepth);
                 _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
 
                 _v3FogSpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
