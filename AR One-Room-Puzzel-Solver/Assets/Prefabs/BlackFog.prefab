@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4877775416618852}
   - component: {fileID: 54219188615330482}
+  - component: {fileID: 135873456207490376}
   m_Layer: 0
   m_Name: BlackFog
   m_TagString: Fog
@@ -321,3 +322,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!135 &135873456207490376
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131940255596068}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}

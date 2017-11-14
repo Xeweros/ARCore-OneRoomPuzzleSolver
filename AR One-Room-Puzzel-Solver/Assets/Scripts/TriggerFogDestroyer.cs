@@ -8,7 +8,9 @@ public class TriggerFogDestroyer : MonoBehaviour
     {
         if (other.transform.CompareTag("Fog"))
         {
-            Destroy(other.gameObject);
+            //other.GetComponentInChildren<>
+
+            Destroy(other.gameObject, 10.0f);
         }
     }
 }
