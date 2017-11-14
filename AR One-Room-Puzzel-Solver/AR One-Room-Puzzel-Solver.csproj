@@ -381,13 +381,18 @@
     <Compile Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARTrackingStateReason.cs" />
     <Compile Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARUserAnchor.cs" />
     <Compile Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\UnityARSessionNativeInterface.cs" />
-    <Compile Include="Assets\Scripts\CameraFocusOnRaycastObject.cs" />
-    <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\FullCircleCheck.cs" />
-    <Compile Include="Assets\Scripts\IsCameraInCenter.cs" />
+    <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtBehaviour.cs" />
+    <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtCameraBehaviour.cs" />
+    <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\RotateBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Fail\CameraFocusOnRaycastObject.cs" />
+    <Compile Include="Assets\Scripts\Fail\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Fail\FullCircleCheck.cs" />
+    <Compile Include="Assets\Scripts\Fail\IsCameraInCenter.cs" />
+    <Compile Include="Assets\Scripts\Fail\RotateAroundCamera.cs" />
+    <Compile Include="Assets\Scripts\Fail\ScanningAndTrackingManager.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlaneVisualizer.cs" />
-    <Compile Include="Assets\Scripts\RotateAroundCamera.cs" />
-    <Compile Include="Assets\Scripts\ScanningAndTrackingManager.cs" />
+    <Compile Include="Assets\Scripts\TriggerFogDestroyer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ARResources\GoogleARCore\HelloARExample\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />

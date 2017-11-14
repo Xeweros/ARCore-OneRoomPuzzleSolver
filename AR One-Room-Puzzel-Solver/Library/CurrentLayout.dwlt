@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -107,7 +107,7 @@ MonoBehaviour:
     width: 1920
     height: 947
   m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
   controlID: 11
 --- !u!114 &6
@@ -131,7 +131,7 @@ MonoBehaviour:
     width: 1558
     height: 947
   m_MinSize: {x: 406, y: 492}
-  m_MaxSize: {x: 14006, y: 14042}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
   controlID: 12
 --- !u!114 &7
@@ -230,10 +230,10 @@ MonoBehaviour:
     y: 612
     width: 1558
     height: 335
-  m_MinSize: {x: 336, y: 271}
-  m_MaxSize: {x: 14006, y: 10021}
+  m_MinSize: {x: 334, y: 271}
+  m_MaxSize: {x: 14004, y: 10021}
   vertical: 0
-  controlID: 79
+  controlID: 68
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -417,14 +417,14 @@ MonoBehaviour:
     height: 591
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 23.781670729709273
+  lastFramingTime: 1349.6138032177048
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.10384983, y: 0.008210301, z: 0.002145052}
+    m_Target: {x: -0.80435884, y: 0.3740575, z: -0.0056438446}
     speed: 2
-    m_Value: {x: 0.10384983, y: 0.008210301, z: 0.002145052}
+    m_Value: {x: -0.80435884, y: 0.3740575, z: -0.0056438446}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -448,13 +448,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.07161638, y: -0.9283771, z: 0.25965708, w: -0.25605726}
+    m_Target: {x: 0.06723236, y: 0.88467306, z: -0.13481084, w: 0.44120234}
     speed: 2
-    m_Value: {x: -0.07161638, y: -0.9283771, z: 0.25965708, w: -0.25605726}
+    m_Value: {x: 0.06723236, y: 0.88467306, z: -0.13481084, w: 0.44120234}
   m_Size:
-    m_Target: 0.44289434
+    m_Target: 1.6578839
     speed: 2
-    m_Value: 0.44289434
+    m_Value: 1.6578839
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -524,26 +524,26 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 8afbffff98fbffff00000000d0330000
+    m_ExpandedIDs: 421effff8647ffff98fbffff00000000b22d0000bc2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ARCoreScanFocusObject
-      m_OriginalName: ARCoreScanFocusObject
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11338
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
   m_ExpandedScenes:
-  - Level 1
+  - Actuall Level 1
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -613,19 +613,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/ScanningPrefabs
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/ScanningPrefabs
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GitHubReposetories\ARCore-EscapeRoomGame\AR One-Room-Puzzel-Solver
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 042d0000
-    m_LastClickedID: 11524
-    m_ExpandedIDs: 00000000a8280000d2280000fa2900001c2a00001e2a0000942a0000ba2a0000d82a0000522b0000d02c0000d22c0000d42c0000d62c0000d82c0000da2c0000ffffff7f
+    m_SelectedIDs: ac2b0000
+    m_LastClickedID: 11180
+    m_ExpandedIDs: 00000000b2280000dc280000ea2a0000ec2a0000a22b0000d02b0000e22b0000122c00004a2c0000cc2c00008a2e00008c2e00008e2e0000902e0000922e0000942e0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -653,7 +653,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a8280000d2280000622900001c2a00001e2a00008a2a0000a82a0000ba2a0000d82a0000522b0000d02c0000d22c0000d42c0000d62c0000d82c0000da2c0000
+    m_ExpandedIDs: 00000000b2280000dc280000ea2a0000ec2a0000a22b0000ac2b0000d02b0000e22b0000122c00004a2c0000cc2c00008a2e00008c2e00008e2e0000902e0000922e0000942e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -681,21 +681,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: d05effffa440fcff4a87fbfff6fefaff64d0f9ff6aa2f9fffa24000020250000cc270000e625000036250000000000004e250000e62c0000122a00005a2a0000
+    m_ExpandedInstanceIDs: d05effffa440fcff4a87fbfff6fefaff64d0f9ff6aa2f9fffa24000020250000cc270000e625000036250000000000004e250000e62c0000122a00005a2a000080330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: TriggerFogDestroyer
+      m_OriginalName: TriggerFogDestroyer
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 14548
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
