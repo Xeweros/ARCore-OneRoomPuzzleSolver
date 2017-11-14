@@ -99,14 +99,14 @@ namespace GoogleARCore.HelloAR
         {
 
 
-            for (int i = 0; i < Keys.Count; i++)
+            for (int i = 0; i < Keyparts.Count; i++)
             {
                
-                    Anchor anchor = Session.CreateAnchor(Keyparts[i].transform.position, Quaternion.identity);
+                    //Anchor anchor = Session.CreateAnchor(Keyparts[i].transform.position, Quaternion.identity);
 
-                    Instantiate(Keys[i].lootObject, Keyparts[i].transform.position, Quaternion.identity, anchor.transform);
-                    Debug.Log(Keys[i].lootObject.name + "has spawned in the location: " + Keys[i].lootObject.transform.position);
-                    Debug.Log("spawn chance is: " + Keys[i].spawnChance + "%");
+                    Instantiate(Keys[0].lootObject, Keyparts[i].transform.position, Quaternion.identity);
+                    Debug.Log(Keys[0].lootObject.name + "has spawned in the location: " + Keys[0].lootObject.transform.position);
+                    Debug.Log("spawn chance is: " + Keys[0].spawnChance + "%");
                     
             }
         }
@@ -145,8 +145,8 @@ namespace GoogleARCore.HelloAR
                 planeObject.GetComponent<TrackedPlaneVisualizer>().SetTrackedPlane(m_newPlanes[i]);
 
                 // Apply a random color and grid rotation.
-                planeObject.GetComponent<Renderer>().material.SetColor("_GridColor", m_planeColors[Random.Range(0,
-                    m_planeColors.Length - 1)]);
+                //planeObject.GetComponent<Renderer>().material.SetColor("_GridColor", m_planeColors[Random.Range(0,
+                //    m_planeColors.Length - 1)]);
                 planeObject.GetComponent<Renderer>().material.SetFloat("_UvRotation", Random.Range(0.0f, 360.0f));
             }
 
