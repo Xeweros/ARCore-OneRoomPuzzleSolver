@@ -165,6 +165,8 @@ namespace GoogleARCore.HelloAR
                 if (raycastHit.transform.CompareTag("Key"))
                 {
                     m_nNumbersOfKeysLeft--;
+                    Destroy(raycastHit.transform.gameObject);
+
                     if (m_nNumbersOfKeysLeft <= 0)
                         m_KeysLeftText.text = "Es sind keine Schlüssel mehr zu finden!";
                     else
@@ -172,13 +174,13 @@ namespace GoogleARCore.HelloAR
                 }
             }
 
-            TrackableHit hit;
-            TrackableHitFlag raycastFilter = TrackableHitFlag.PlaneWithinBounds | TrackableHitFlag.PlaneWithinPolygon;
+            //TrackableHit hit;
+            //TrackableHitFlag raycastFilter = TrackableHitFlag.PlaneWithinBounds | TrackableHitFlag.PlaneWithinPolygon;
 
-            if (Session.Raycast(m_firstPersonCamera.ScreenPointToRay(touch.position), raycastFilter, out hit))
-            {
+            //if (Session.Raycast(m_firstPersonCamera.ScreenPointToRay(touch.position), raycastFilter, out hit))
+            //{
                 
-            }
+            //}
         }
 
         /// <summary>
