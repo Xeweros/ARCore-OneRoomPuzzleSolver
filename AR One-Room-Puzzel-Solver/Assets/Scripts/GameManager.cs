@@ -24,6 +24,7 @@ namespace GoogleARCore.HelloAR
     using UnityEngine;
     using UnityEngine.Rendering;
     using GoogleARCore;
+    using UnityEngine.UI;
 
     /// <summary>
     /// Controlls the HelloAR example.
@@ -40,15 +41,15 @@ namespace GoogleARCore.HelloAR
         /// </summary>
         public GameObject m_trackedPlanePrefab;
 
-        /// <summary>
-        /// A model to place when a raycast from a user touch hits a plane.
-        /// </summary>
-        public GameObject m_goKeyPrefab;
-
-        /// <summary>
-        /// A gameobject parenting UI for displaying the "searching for planes" snackbar.
-        /// </summary>
+        [Header("UI")]
         public GameObject m_searchingForPlaneUI;
+        public GameObject m_WinUI;
+        public Text m_KeysLeftText;
+
+        [Header("Keys")]
+        public GameObject m_goPrefabKey;
+        public int m_nNumbersOfKeys = 3;
+        private int m_nNumbersOfKeysLeft = 0;     
 
         [Header("Room Dimension")]
         public float m_fRoomWidth = 4.0f;
@@ -65,7 +66,7 @@ namespace GoogleARCore.HelloAR
 
         private void Start()
         {
-            Vector3 _v3FogSpawnPosition = new Vector3(0.0f, 0.0f, 0.0f);
+            Vector3 _v3SpawnPosition = new Vector3(0.0f, 0.0f, 0.0f);
 
             float _fWidth = 0.0f;
             float _fDepth = 0.0f;
@@ -77,9 +78,23 @@ namespace GoogleARCore.HelloAR
                 _fDepth = Random.Range(0.0f, m_fRoomDepth);
                 _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
 
-                _v3FogSpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
+                _v3SpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
 
-                Instantiate(m_goPrefabFog, _v3FogSpawnPosition, Quaternion.identity);
+                Instantiate(m_goPrefabFog, _v3SpawnPosition, Quaternion.identity);
+            }
+
+            m_nNumbersOfKeysLeft = m_nNumbersOfKeys;
+            m_KeysLeftText.text = "Es sind noch " + m_nNumbersOfKeysLeft + " Schlüssel zu finden!";
+
+            for (int i = 0; i < m_nNumbersOfKeys; i++)
+            {
+                _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
+                _fDepth = Random.Range(0.0f, m_fRoomDepth);
+                _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
+
+                _v3SpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
+
+                Instantiate(m_goPrefabKey, _v3SpawnPosition, Quaternion.identity);
             }
         }
 
@@ -133,6 +148,28 @@ namespace GoogleARCore.HelloAR
             if (Input.touchCount < 1 || (touch = Input.GetTouch(0)).phase != TouchPhase.Began)
             {
                 return;
+            }
+
+            RaycastHit raycastHit;
+
+            if (Physics.Raycast(m_firstPersonCamera.ScreenPointToRay(touch.position), out raycastHit))
+            {
+                if (raycastHit.transform.CompareTag("Door"))
+                {
+                    if (m_nNumbersOfKeysLeft <= 0)
+                    {
+                        m_WinUI.SetActive(true);
+                    }
+                }
+
+                if (raycastHit.transform.CompareTag("Key"))
+                {
+                    m_nNumbersOfKeysLeft--;
+                    if (m_nNumbersOfKeysLeft <= 0)
+                        m_KeysLeftText.text = "Es sind keine Schlüssel mehr zu finden!";
+                    else
+                        m_KeysLeftText.text = "Es sind noch " + m_nNumbersOfKeysLeft + " Schlüssel zu finden!";
+                }
             }
 
             TrackableHit hit;
