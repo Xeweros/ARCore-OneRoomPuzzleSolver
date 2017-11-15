@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23008151755789692}
   - component: {fileID: 54066131291692874}
   - component: {fileID: 65024204912698166}
+  - component: {fileID: 114655275120553846}
   m_Layer: 0
   m_Name: Key_Gold
   m_TagString: Key
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1868064731215608}
   m_LocalRotation: {x: 0.14556387, y: -0.025666833, z: 0.17174079, w: 0.97399056}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.258, y: 0, z: 0}
   m_LocalScale: {x: 0.025000004, y: 0.025, z: 0.025000004}
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,3 +112,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.1526294, y: 6.3028293, z: 2.402361}
   m_Center: {x: 0.31444487, y: 3.1387784, z: -0.1601255}
+--- !u!114 &114655275120553846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868064731215608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a72bc08bbafd141a6386dbdbd23321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fDelaySound: 10.2
+  m_auClipKeySparkelSound: {fileID: 8300000, guid: 42bb7e5d6b3a37d41bea54187a611727,
+    type: 3}

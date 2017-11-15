@@ -60,6 +60,10 @@ namespace GoogleARCore.HelloAR
         public GameObject m_goPrefabFog;
         public int m_nNumberOfFog = 100;
 
+        [Header("Sound")]
+        public AudioSource m_ausoPickUpKey;
+        public AudioSource m_ausoWinSound;
+
         private List<TrackedPlane> m_newPlanes = new List<TrackedPlane>();
 
         private List<TrackedPlane> m_allPlanes = new List<TrackedPlane>();
@@ -154,10 +158,13 @@ namespace GoogleARCore.HelloAR
 
             if (Physics.Raycast(m_firstPersonCamera.ScreenPointToRay(touch.position), out raycastHit))
             {
+                //m_KeysLeftText.text = "Raycasthit name: " + raycastHit.transform.name;
+
                 if (raycastHit.transform.CompareTag("Door"))
                 {
                     if (m_nNumbersOfKeysLeft <= 0)
                     {
+                        m_ausoWinSound.Play();
                         m_WinUI.SetActive(true);
                     }
                 }
@@ -165,12 +172,13 @@ namespace GoogleARCore.HelloAR
                 if (raycastHit.transform.CompareTag("Key"))
                 {
                     m_nNumbersOfKeysLeft--;
+                    m_ausoPickUpKey.Play();
                     Destroy(raycastHit.transform.gameObject);
 
                     if (m_nNumbersOfKeysLeft <= 0)
                         m_KeysLeftText.text = "Es sind keine Schlüssel mehr zu finden!";
                     else
-                        m_KeysLeftText.text = "Es sind noch " + m_nNumbersOfKeysLeft + " Schlüssel zu finden!";
+                        m_KeysLeftText.text = "Es sind noch " + m_nNumbersOfKeysLeft + " Schlüssel zu finden! ";
                 }
             }
 

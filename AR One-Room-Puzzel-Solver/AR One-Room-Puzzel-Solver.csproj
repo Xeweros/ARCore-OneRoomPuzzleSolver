@@ -384,6 +384,7 @@
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtBehaviour.cs" />
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtCameraBehaviour.cs" />
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\RotateBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Fail\CameraFocusOnRaycastObject.cs" />
     <Compile Include="Assets\Scripts\Fail\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Fail\FullCircleCheck.cs" />
@@ -391,6 +392,7 @@
     <Compile Include="Assets\Scripts\Fail\RotateAroundCamera.cs" />
     <Compile Include="Assets\Scripts\Fail\ScanningAndTrackingManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\KeySound.cs" />
     <Compile Include="Assets\Scripts\PlaneVisualizer.cs" />
     <Compile Include="Assets\Scripts\TriggerFogDestroyer.cs" />
   </ItemGroup>
