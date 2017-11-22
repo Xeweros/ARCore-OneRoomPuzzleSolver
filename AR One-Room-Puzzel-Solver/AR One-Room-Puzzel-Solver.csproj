@@ -384,6 +384,7 @@
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtBehaviour.cs" />
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtCameraBehaviour.cs" />
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\RotateBehaviour.cs" />
+    <Compile Include="Assets\Scripts\DelayedDestroyed.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Fail\CameraFocusOnRaycastObject.cs" />
     <Compile Include="Assets\Scripts\Fail\CameraMovement.cs" />

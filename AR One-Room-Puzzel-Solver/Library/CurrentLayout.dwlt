@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -203,8 +203,8 @@ MonoBehaviour:
     y: 0
     width: 272
     height: 612
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 336, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 55
+  controlID: 147
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -312,7 +312,7 @@ MonoBehaviour:
   - {fileID: 24}
   - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -445,14 +445,14 @@ MonoBehaviour:
     height: 591
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1851.0064916156775
-  m_2DMode: 0
+  lastFramingTime: 2393.2316206504224
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.4414253, y: -5.427928, z: 13.900451}
+    m_Target: {x: 593.93274, y: 328.00864, z: -6.375}
     speed: 2
-    m_Value: {x: 3.4414253, y: -5.427928, z: 13.900451}
+    m_Value: {x: 593.93274, y: 328.00864, z: -6.375}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -468,27 +468,27 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
-      speed: 2
-      m_Value: 1
-    zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
+    zGrid:
+      m_Target: 1
+      speed: 2
+      m_Value: 1
   m_Rotation:
-    m_Target: {x: 0.19896223, y: 0.32696685, z: -0.07062247, w: 0.9211511}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0.19896223, y: 0.32696685, z: -0.07062247, w: 0.9211511}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 22
+    m_Target: 865.1827
     speed: 2
-    m_Value: 22
+    m_Value: 865.1827
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: 0.09509441, y: 0.803651, z: -0.13359128, w: 0.57206255}
+  m_LastSceneViewRotation: {x: 0.25356475, y: 0.17409793, z: -0.04644896, w: 0.950388}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -552,18 +552,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ea98feff98fbffff00000000c62c0000
+    m_ExpandedIDs: c2d1fdffeaf3fdff98fbffff000000005c2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: WayPoint
-      m_OriginalName: WayPoint
+      m_Name: BlackFog 2
+      m_OriginalName: BlackFog 2
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -89682
+      m_UserData: -75512
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -641,19 +641,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Key
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Key
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GitHubReposetories\ARCore-EscapeRoomGame\AR One-Room-Puzzel-Solver
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 162b0000
-    m_LastClickedID: 11030
-    m_ExpandedIDs: 00000000b4280000e82800007c2a00007e2a0000042b0000102b0000282b00003a2b0000602b0000f02b0000c22d0000c42d0000c62d0000c82d0000ca2d0000cc2d0000ce2d0000ce33000038340000ffffff7f
+    m_SelectedIDs: 842c0000
+    m_LastClickedID: 11396
+    m_ExpandedIDs: 00000000b8280000f028000000290000022b0000042b0000122b00008e2b0000b22b0000c42b0000ea2b0000802c00003c2f00003e2f0000402f0000422f0000442f0000462f0000482f0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -681,7 +681,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b4280000e82800007c2a00007e2a0000042b0000282b00003a2b0000602b0000f02b0000c22d0000c42d0000c62d0000c82d0000ca2d0000cc2d0000ce2d0000
+    m_ExpandedIDs: 00000000b8280000f028000000290000022b0000042b0000122b00008e2b00009a2b0000b22b0000c42b0000ea2b0000802c00003c2f00003e2f0000402f0000422f0000442f0000462f0000482f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -712,15 +712,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: d05effffa440fcff4a87fbfff6fefaff64d0f9ff6aa2f9fffa24000020250000cc270000e625000036250000000000004e250000e62c00005a2a000080330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Textures
-      m_OriginalName: Textures
+      m_Name: DelayedDestroyed
+      m_OriginalName: DelayedDestroyed
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13372
+      m_UserData: 23654
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0

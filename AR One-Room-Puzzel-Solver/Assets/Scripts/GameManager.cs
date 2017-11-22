@@ -76,15 +76,28 @@ namespace GoogleARCore.HelloAR
             float _fDepth = 0.0f;
             float _fHeight = 0.0f;
 
-            for (int i = 0; i < m_nNumberOfFog; i++)
+            //for (int i = 0; i < m_nNumberOfFog; i++)
+            //{
+            //    _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
+            //    _fDepth = Random.Range(0.0f, m_fRoomDepth);
+            //    _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
+
+            //    _v3SpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
+
+            //    Instantiate(m_goPrefabFog, _v3SpawnPosition, Quaternion.identity);
+            //}
+
+            for (float _height = -1.05f; _height <= m_fRoomHeight - 1.05f; _height += 2f)
             {
-                _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
-                _fDepth = Random.Range(0.0f, m_fRoomDepth);
-                _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
+                for (float _depth = 0; _depth <= m_fRoomDepth; _depth += 2f)
+                {
+                    for (float _width = -m_fRoomWidth / 2; _width <= m_fRoomWidth / 2; _width += 2f)
+                    {
+                        _v3SpawnPosition = new Vector3(_width, _height, _depth);
 
-                _v3SpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
-
-                Instantiate(m_goPrefabFog, _v3SpawnPosition, Quaternion.identity);
+                        Instantiate(m_goPrefabFog, _v3SpawnPosition, Quaternion.identity);
+                    }
+                }
             }
 
             m_nNumbersOfKeysLeft = m_nNumbersOfKeys;
