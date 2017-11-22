@@ -381,9 +381,13 @@
     <Compile Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARTrackingStateReason.cs" />
     <Compile Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARUserAnchor.cs" />
     <Compile Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\UnityARSessionNativeInterface.cs" />
+    <Compile Include="Assets\OutlineEffect\LinkedSet.cs" />
+    <Compile Include="Assets\OutlineEffect\Outline.cs" />
+    <Compile Include="Assets\OutlineEffect\OutlineEffect.cs" />
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtBehaviour.cs" />
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtCameraBehaviour.cs" />
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\RotateBehaviour.cs" />
+    <Compile Include="Assets\Scripts\ActivateHighlight.cs" />
     <Compile Include="Assets\Scripts\DelayedDestroyed.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Fail\CameraFocusOnRaycastObject.cs" />
@@ -394,6 +398,7 @@
     <Compile Include="Assets\Scripts\Fail\ScanningAndTrackingManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\KeySound.cs" />
+    <Compile Include="Assets\Scripts\KeysRotate.cs" />
     <Compile Include="Assets\Scripts\PlaneVisualizer.cs" />
     <Compile Include="Assets\Scripts\TriggerFogDestroyer.cs" />
   </ItemGroup>
@@ -411,6 +416,8 @@
     <None Include="Assets\ARResources\UnityARKitPlugin\Examples\Common\Shaders\MobileOcclusion.shader" />
     <None Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\Shaders\YUVShader.shader" />
     <None Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\Shaders\YUVShaderLinear.shader" />
+    <None Include="Assets\OutlineEffect\Resources\OutlineBufferShader.shader" />
+    <None Include="Assets\OutlineEffect\Resources\OutlineShader.shader" />
     <None Include="Assets\Prefabs\Key\readME keys.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

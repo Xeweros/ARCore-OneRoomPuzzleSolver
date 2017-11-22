@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 54705354619406152}
   - component: {fileID: 65404751360193706}
   - component: {fileID: 82974618746011926}
+  - component: {fileID: 114855984022729714}
+  - component: {fileID: 114514912735381076}
   m_Layer: 0
   m_Name: Key_Silver
   m_TagString: Key
@@ -38,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1221339957958740}
   m_LocalRotation: {x: 0.14556387, y: -0.025666833, z: 0.17174079, w: 0.97399056}
-  m_LocalPosition: {x: 2.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.025000004, y: 0.025, z: 0.025000004}
   m_Children: []
   m_Father: {fileID: 0}
@@ -132,7 +134,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 3
+  MaxDistance: 2
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -198,3 +200,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114514912735381076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221339957958740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2345abd5159c26c41900d1d3f3ecbe6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fRotationSpeed: 75
+--- !u!114 &114855984022729714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221339957958740}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
