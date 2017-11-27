@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 54705354619406152}
   - component: {fileID: 65404751360193706}
   - component: {fileID: 82974618746011926}
-  - component: {fileID: 114855984022729714}
   - component: {fileID: 114514912735381076}
   m_Layer: 0
   m_Name: Key_Silver
@@ -212,18 +211,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fRotationSpeed: 75
---- !u!114 &114855984022729714
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1221339957958740}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: 0
-  eraseRenderer: 0
-  originalLayer: 0
-  originalMaterials: []

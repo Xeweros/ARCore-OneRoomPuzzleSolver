@@ -87,11 +87,11 @@ namespace GoogleARCore.HelloAR
             //    Instantiate(m_goPrefabFog, _v3SpawnPosition, Quaternion.identity);
             //}
 
-            for (float _height = -1.05f; _height <= m_fRoomHeight - 1.05f; _height += 2f)
+            for (float _height = -1.05f; _height <= m_fRoomHeight - 1.05f; _height += 2.25f)
             {
-                for (float _depth = 0; _depth <= m_fRoomDepth; _depth += 2f)
+                for (float _depth = 0; _depth <= m_fRoomDepth; _depth += 2.25f)
                 {
-                    for (float _width = -m_fRoomWidth / 2; _width <= m_fRoomWidth / 2; _width += 2f)
+                    for (float _width = -m_fRoomWidth / 2; _width <= m_fRoomWidth / 2; _width += 2.25f)
                     {
                         _v3SpawnPosition = new Vector3(_width, _height, _depth);
 
@@ -192,6 +192,11 @@ namespace GoogleARCore.HelloAR
                         m_KeysLeftText.text = "Es sind keine Schlüssel mehr zu finden!";
                     else
                         m_KeysLeftText.text = "Es sind noch " + m_nNumbersOfKeysLeft + " Schlüssel zu finden! ";
+                }
+
+                if (raycastHit.transform.CompareTag("Enemy"))
+                {
+                    raycastHit.transform.GetComponent<EnemyHealth>().getDamaged();
                 }
             }
 
