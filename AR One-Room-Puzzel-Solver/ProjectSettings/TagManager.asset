@@ -8,6 +8,8 @@ TagManager:
   - Fog
   - Door
   - Enemy
+  - Numbad
+  - Numpad
   layers:
   - Default
   - TransparentFX

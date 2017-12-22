@@ -64,12 +64,36 @@ namespace GoogleARCore.HelloAR
         public AudioSource m_ausoPickUpKey;
         public AudioSource m_ausoWinSound;
 
+        [Header("Numbers")]
+        public GameObject m_goPrefabNumber0;
+        public GameObject m_goPrefabNumber1;
+        public GameObject m_goPrefabNumber2;
+        public GameObject m_goPrefabNumber3;
+        public GameObject m_goPrefabNumber4;
+        public GameObject m_goPrefabNumber5;
+        public GameObject m_goPrefabNumber6;
+        public GameObject m_goPrefabNumber7;
+        public GameObject m_goPrefabNumber8;
+        public GameObject m_goPrefabNumber9;
+        private GameObject m_goPrefabInstance;
+
         private List<TrackedPlane> m_newPlanes = new List<TrackedPlane>();
 
         private List<TrackedPlane> m_allPlanes = new List<TrackedPlane>();
 
+        private void Awake()
+        {
+            //StaticRoomDataManager.CreateSaveDataIfNotExistsElseReadData();
+
+            m_fRoomWidth = StaticRoomDataManager.m_fActiveRoomWidth;
+            m_fRoomDepth = StaticRoomDataManager.m_fActiveRoomDepth;
+            m_fRoomHeight = StaticRoomDataManager.m_fActiveRoomHeight;
+        }
+
         private void Start()
         {
+            
+
             Vector3 _v3SpawnPosition = new Vector3(0.0f, 0.0f, 0.0f);
 
             float _fWidth = 0.0f;
@@ -198,6 +222,11 @@ namespace GoogleARCore.HelloAR
                 {
                     raycastHit.transform.GetComponent<EnemyHealth>().getDamaged();
                 }
+
+                if (raycastHit.transform.CompareTag("Numpad"))
+                {
+                    raycastHit.transform.GetComponent<Numpad>().PressedNumberOnNumpad();
+                }
             }
 
             //TrackableHit hit;
@@ -207,6 +236,87 @@ namespace GoogleARCore.HelloAR
             //{
                 
             //}
+        }
+
+        public void SpawnNumbersForSafe(int _count, SafeManager.SafeCode[] _codeData)
+        {
+            GameObject _prefabToUse;
+            GameObject _instantiatedNumber;
+            MeshRenderer[] _renderer;
+            float _fWidth = 0.0f;
+            float _fDepth = 0.0f;
+            float _fHeight = 0.0f;
+
+            for (int i = 0; i < _count; ++i)
+            {
+                switch (_codeData[i].m_nNumber)
+                {
+                    case 0:
+                        _prefabToUse = m_goPrefabNumber0;
+                        break;
+
+                    case 1:
+                        _prefabToUse = m_goPrefabNumber1;
+                        break;
+
+                    case 2:
+                        _prefabToUse = m_goPrefabNumber2;
+                        break;
+
+                    case 3:
+                        _prefabToUse = m_goPrefabNumber3;
+                        break;
+
+                    case 4:
+                        _prefabToUse = m_goPrefabNumber4;
+                        break;
+
+                    case 5:
+                        _prefabToUse = m_goPrefabNumber5;
+                        break;
+
+                    case 6:
+                        _prefabToUse = m_goPrefabNumber6;
+                        break;
+
+                    case 7:
+                        _prefabToUse = m_goPrefabNumber7;
+                        break;
+
+                    case 8:
+                        _prefabToUse = m_goPrefabNumber8;
+                        break;
+
+                    case 9:
+                        _prefabToUse = m_goPrefabNumber9;
+                        break;
+
+                    default:
+                        _prefabToUse = m_goPrefabNumber0;
+                        Debug.Log("Safe Code Number Prefab Problem");
+                        break;
+                }
+
+                _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
+                _fDepth = Random.Range(0.0f, m_fRoomDepth);
+                _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
+
+                _instantiatedNumber = Instantiate(_prefabToUse, new Vector3(_fWidth, _fHeight, _fDepth), Quaternion.identity);
+
+                _renderer = _instantiatedNumber.GetComponentsInChildren<MeshRenderer>();
+
+                foreach (MeshRenderer _mr in _renderer)
+                {
+                    _mr.material.color = _codeData[i].m_cColorClue;
+                }
+            }     
+        }
+
+        public void SpawnSafeKey(Vector3 _KeyPosition)
+        {
+            Instantiate(m_goPrefabKey, _KeyPosition, Quaternion.identity);
+            m_nNumbersOfKeysLeft++;
+            m_KeysLeftText.text = "Es sind noch " + m_nNumbersOfKeysLeft + " Schlüssel zu finden!";
         }
 
         /// <summary>
