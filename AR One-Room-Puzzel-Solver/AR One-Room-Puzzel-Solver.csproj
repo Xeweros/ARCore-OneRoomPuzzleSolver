@@ -238,11 +238,11 @@
     <Reference Include="GoogleAR.UnityNative">
       <HintPath>Assets\ARResources\GoogleARCore\SDK\Plugins\GoogleAR.UnityNative.dll</HintPath>
     </Reference>
-    <Reference Include="TextMeshPro-2017.3-1.0.56-Runtime">
-      <HintPath>Assets\TextMesh Pro\Plugins\Editor DLL\TextMeshPro-2017.3-1.0.56-Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="TextMeshPro-2017.3-1.0.56-Editor">
       <HintPath>Assets\TextMesh Pro\Plugins\Editor DLL\TextMeshPro-2017.3-1.0.56-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMeshPro-2017.3-1.0.56-Runtime">
+      <HintPath>Assets\TextMesh Pro\Plugins\Editor DLL\TextMeshPro-2017.3-1.0.56-Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -390,6 +390,8 @@
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtBehaviour.cs" />
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\LookAtCameraBehaviour.cs" />
     <Compile Include="Assets\Prefabs\Sky FX Pack\Scripts\RotateBehaviour.cs" />
+    <Compile Include="Assets\Scripts\ChainBall.cs" />
+    <Compile Include="Assets\Scripts\ChainMovement.cs" />
     <Compile Include="Assets\Scripts\DelayedDestroyed.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />

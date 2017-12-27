@@ -60,7 +60,19 @@ public class MainMenu : MonoBehaviour
     public void StartTutorial()
     {
         Debug.Log("load Level Tutorial");
+        //SceneManager.LoadScene(6);
+    }
 
+    public void LoadRandomLevel()
+    {
+        Debug.Log("load Random Level");
+        //SceneManager.LoadScene(4);
+    }
+
+    public void LoadCredits()
+    {
+        Debug.Log("Load Credits");
+        //SceneManager.LoadScene(5);
     }
 
     public void QuitGame()
