@@ -77,6 +77,9 @@ namespace GoogleARCore.HelloAR
         public GameObject m_goPrefabNumber9;
         private GameObject m_goPrefabInstance;
 
+        private float m_fminDepth = 0.0f;
+        private float m_fmaxDepth = 0.0f;
+
         private List<TrackedPlane> m_newPlanes = new List<TrackedPlane>();
 
         private List<TrackedPlane> m_allPlanes = new List<TrackedPlane>();
@@ -88,55 +91,42 @@ namespace GoogleARCore.HelloAR
             m_fRoomWidth = StaticRoomDataManager.m_fActiveRoomWidth;
             m_fRoomDepth = StaticRoomDataManager.m_fActiveRoomDepth;
             m_fRoomHeight = StaticRoomDataManager.m_fActiveRoomHeight;
+
+            if (StaticOptionManager.m_eRoomSetting == StaticOptionManager.RoomSetting.RS_CENTER)
+            {
+                m_fminDepth = -(m_fRoomDepth/2.0f);
+                m_fmaxDepth = (m_fRoomDepth/2.0f);
+            }
+            else
+            {
+                m_fminDepth = 0;
+                m_fmaxDepth = m_fRoomDepth;
+            }
         }
 
         private void Start()
         {
+
+            switch (StaticOptionManager.m_eDifficulty)
+            {
+
+                case StaticOptionManager.DifficultySetting.DS_EASY:
+                    Easy();
+                    break;
+
+                case StaticOptionManager.DifficultySetting.DS_NORMAL:
+                    Easy();
+                    break;
+
+                case StaticOptionManager.DifficultySetting.DS_HARD:
+                    Easy();
+                    break;
+
+                default:
+                    Easy();
+                    break;
+            }
             
-
-            Vector3 _v3SpawnPosition = new Vector3(0.0f, 0.0f, 0.0f);
-
-            float _fWidth = 0.0f;
-            float _fDepth = 0.0f;
-            float _fHeight = 0.0f;
-
-            //for (int i = 0; i < m_nNumberOfFog; i++)
-            //{
-            //    _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
-            //    _fDepth = Random.Range(0.0f, m_fRoomDepth);
-            //    _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
-
-            //    _v3SpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
-
-            //    Instantiate(m_goPrefabFog, _v3SpawnPosition, Quaternion.identity);
-            //}
-
-            for (float _height = -1.05f; _height <= m_fRoomHeight - 1.05f; _height += 2.25f)
-            {
-                for (float _depth = 0; _depth <= m_fRoomDepth; _depth += 2.25f)
-                {
-                    for (float _width = -m_fRoomWidth / 2; _width <= m_fRoomWidth / 2; _width += 2.25f)
-                    {
-                        _v3SpawnPosition = new Vector3(_width, _height, _depth);
-
-                        Instantiate(m_goPrefabFog, _v3SpawnPosition, Quaternion.identity);
-                    }
-                }
-            }
-
-            m_nNumbersOfKeysLeft = m_nNumbersOfKeys;
-            m_KeysLeftText.text = "Es sind noch " + m_nNumbersOfKeysLeft + " Schlüssel zu finden!";
-
-            for (int i = 0; i < m_nNumbersOfKeys; i++)
-            {
-                _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
-                _fDepth = Random.Range(0.0f, m_fRoomDepth);
-                _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
-
-                _v3SpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
-
-                Instantiate(m_goPrefabKey, _v3SpawnPosition, Quaternion.identity);
-            }
         }
 
         /// <summary>
@@ -298,7 +288,7 @@ namespace GoogleARCore.HelloAR
                 }
 
                 _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
-                _fDepth = Random.Range(0.0f, m_fRoomDepth);
+                _fDepth = Random.Range(m_fminDepth, m_fmaxDepth);
                 _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
 
                 _instantiatedNumber = Instantiate(_prefabToUse, new Vector3(_fWidth, _fHeight, _fDepth), Quaternion.identity);
@@ -317,6 +307,63 @@ namespace GoogleARCore.HelloAR
             Instantiate(m_goPrefabKey, _KeyPosition, Quaternion.identity);
             m_nNumbersOfKeysLeft++;
             m_KeysLeftText.text = "Es sind noch " + m_nNumbersOfKeysLeft + " Schlüssel zu finden!";
+        }
+
+        public void Easy()
+        {
+            Vector3 _v3SpawnPosition = new Vector3(0.0f, 0.0f, 0.0f);
+
+            float _fWidth = 0.0f;
+            float _fDepth = 0.0f;
+            float _fHeight = 0.0f;
+
+            //for (int i = 0; i < m_nNumberOfFog; i++)
+            //{
+            //    _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
+            //    _fDepth = Random.Range(0.0f, m_fRoomDepth);
+            //    _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
+
+            //    _v3SpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
+
+            //    Instantiate(m_goPrefabFog, _v3SpawnPosition, Quaternion.identity);
+            //}
+
+            for (float _height = -1.05f; _height <= m_fRoomHeight - 1.05f; _height += 2.25f)
+            {
+                for (float _depth = m_fminDepth; _depth <= m_fmaxDepth; _depth += 2.25f)
+                {
+                    for (float _width = -m_fRoomWidth / 2; _width <= m_fRoomWidth / 2; _width += 2.25f)
+                    {
+                        _v3SpawnPosition = new Vector3(_width, _height, _depth);
+
+                        Instantiate(m_goPrefabFog, _v3SpawnPosition, Quaternion.identity);
+                    }
+                }
+            }
+
+            m_nNumbersOfKeysLeft = m_nNumbersOfKeys;
+            m_KeysLeftText.text = "Es sind noch " + m_nNumbersOfKeysLeft + " Schlüssel zu finden!";
+
+            for (int i = 0; i < m_nNumbersOfKeys; i++)
+            {
+                _fWidth = Random.Range(-m_fRoomWidth / 2.0f, m_fRoomWidth / 2.0f);
+                _fDepth = Random.Range(m_fminDepth, m_fmaxDepth);
+                _fHeight = Random.Range(-m_fRoomHeight / 2.0f, m_fRoomHeight / 2.0f);
+
+                _v3SpawnPosition = new Vector3(_fWidth, _fHeight, _fDepth);
+
+                Instantiate(m_goPrefabKey, _v3SpawnPosition, Quaternion.identity);
+            }
+        }
+
+        public void Normal()
+        {
+
+        }
+
+        public void Hard()
+        {
+
         }
 
         /// <summary>

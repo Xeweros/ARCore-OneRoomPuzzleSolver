@@ -329,6 +329,7 @@
     <None Include="Assets\ARResources\UnityARKitPlugin\Examples\Common\Shaders\MobileOcclusion.shader" />
     <None Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\Shaders\YUVShader.shader" />
     <None Include="Assets\ARResources\UnityARKitPlugin\Plugins\iOS\UnityARKit\Shaders\YUVShaderLinear.shader" />
+    <None Include="Assets\Data\Option.xml" />
     <None Include="Assets\Data\RoomData.xml" />
     <None Include="Assets\Prefabs\Key\readME keys.txt" />
     <None Include="Assets\Shader\Silhouetted Diffuse Shader.shader" />
